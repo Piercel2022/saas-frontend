@@ -40,11 +40,11 @@ REQUIRED SECTIONS:
 
 
 
-# 📖 [Fitenergie] <a name="about-project"></a>
+# 📖 [saas frontend] <a name="about-project"></a>
 
 
 
-**[Fitenergie]** is a website that promote differents produits on the instagram social media platform
+**[saas-frontend]** is a website that promote differents produits on the instagram social media platform
 
 ## 🛠 Built With <a name="built-with"></a>
 

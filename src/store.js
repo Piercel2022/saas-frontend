@@ -270,7 +270,7 @@ export const updateOrganization = createAsyncThunk(
 export const { logout } = authSlice.actions;
 
 // Configure Store
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     auth: authSlice.reducer,
     organizations: organizationsSlice.reducer,

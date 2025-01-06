@@ -16,6 +16,26 @@ export const fetchOrganizations = createAsyncThunk(
   }
 );
 
+export const createOrganization = createAsyncThunk(
+  'organizations/create',
+  async (organizationData, { rejectWithValue }) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.post('http://localhost:3001/api/v1/organizations', 
+        organizationData,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+ );
+
 const organizationsSlice = createSlice({
     name: 'organizations',
     initialState: {

@@ -21,6 +21,23 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+export const signup = createAsyncThunk(
+  'auth/signup',
+  async (credentials, { rejectWithValue }) => {
+    try {
+      const response = await axios.post('http://localhost:3001/api/v1/auth/sign_up', {
+        email: credentials.email,
+        password: credentials.password,
+        password_confirmation: credentials.passwordConfirmation
+      });
+      localStorage.setItem('token', response.data.token);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,

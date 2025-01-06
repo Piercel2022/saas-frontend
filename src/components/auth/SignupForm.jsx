@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../../features/auth/authSlice';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Alert, AlertDescription} from "../ui/alert"
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({

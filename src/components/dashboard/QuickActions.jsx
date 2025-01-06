@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlusCircle, Users, Settings, FileText, HelpCircle } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '../ui/card';
 
 const QuickActions = () => {
   const actions = [

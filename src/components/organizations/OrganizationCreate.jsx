@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createOrganization } from '../../features/organizations/organizationsSlice';
-import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
-
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import {Alert, AlertDescription} from "../ui/alert";
 
 const OrganizationCreate = () => {
   const [formData, setFormData] = useState({

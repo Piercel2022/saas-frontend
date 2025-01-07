@@ -97,7 +97,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 ```sh
- npx create-react-app fitenergie
+ npx create-react-app saas-frontend
 ```
  
 
@@ -107,8 +107,8 @@ Clone this repository to your desired folder:
 
 ```sh
  
-  git clone git@github.com:Piercel2022/fitenergie.git
-   cd fitenergie
+  git clone git@github.com:Piercel2022/saas-frontend.git
+   cd saas-frontend
 ```
 
 

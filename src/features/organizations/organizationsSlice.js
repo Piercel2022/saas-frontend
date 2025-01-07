@@ -36,6 +36,49 @@ export const createOrganization = createAsyncThunk(
   }
  );
 
+ // fetchOrganizationById implementation
+export const fetchOrganizationById = createAsyncThunk(
+  'organizations/fetchById',
+  async (organizationId, { rejectWithValue }) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get(
+        `http://localhost:3001/api/v1/organizations/${organizationId}`,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// updateOrganization implementation
+export const updateOrganization = createAsyncThunk(
+  'organizations/update',
+  async ({ id, organizationData }, { rejectWithValue }) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.put(
+        `http://localhost:3001/api/v1/organizations/${id}`,
+        organizationData,
+        {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 const organizationsSlice = createSlice({
     name: 'organizations',
     initialState: {

@@ -18,6 +18,7 @@ export default function DashboardLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { user } = useSelector(state => state.auth);
   const dispatch = useDispatch();
+   // eslint-disable-next-line
   const navigate = useNavigate();
   const location = useLocation();
 

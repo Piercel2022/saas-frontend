@@ -40,11 +40,11 @@ REQUIRED SECTIONS:
 
 
 
-# 📖 [saas frontend] <a name="about-project"></a>
+# 📖 [LaunchScale] <a name="about-project"></a>
 
 
 
-**[saas-frontend]** is a website that promote differents produits on the instagram social media platform
+**[LaunchScale]** : Accelerating Your SaaS Journey! LaunchScale is your all-in-one platform for transforming SaaS ideas into thriving businesses. Built for ambitious entrepreneurs and growing teams, it streamlines every aspect of SaaS development and operations. From user management to billing systems, LaunchScale provides the essential building blocks that let you focus on what matters most - your product and customers.
 
 ## 🛠 Built With <a name="built-with"></a>
 

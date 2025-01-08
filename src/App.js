@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Provider } from 'react-redux';
 import { store } from './store';
 
+import NavigationHeader from './layouts/NavigationHeader';
 // Auth Components
 import LoginForm from './components/auth/LoginForm';
 import SignupForm from './components/auth/SignupForm';
@@ -18,13 +19,15 @@ import DashboardHome from './pages/DashboardHome';
 
 const App = () => {
   return (
+    
     <Provider store={store}>
       <Router>
+      <NavigationHeader />
         <Routes>
           {/* Auth Routes */}
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
-
+          
           {/* Dashboard Routes */}
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<DashboardHome />} />

@@ -57,7 +57,7 @@ const SignupForm = () => {
 
   return (
     <div className="w-full max-w-md mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-6 text-center">Create your account</h2>
+      <h2  className="mt-6 text-center text-3xl font-extrabold text-gray-900">Create your account</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         {error && (
